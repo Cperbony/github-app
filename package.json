@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "start": "node server.js && standard --fix"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "react-hot-loader": "^3.0.0-beta.2",
+    "standard": "^7.1.2",
+    "standard-loader": "^4.0.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-validator": "^2.2.2"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "standard": {
+    "globals": [
+      "alert"
+    ]
+  },
+  "name": "github-app",
+  "version": "1.0.0",
+  "description": "App para consumir uma API do github",
+  "main": "server.js",
+  "author": "Claudinei Perboni",
+  "license": "ISC"
+}
