@@ -22,12 +22,12 @@ const UserInfo = ({ userinfo }) => (
 
 UserInfo.propTypes = {
     userinfo: PropTypes.shape({
-        username: PropTypes.string.isRequired,
-        photo: PropTypes.string.isRequired,
-        login: PropTypes.string.isRequired,
-        repos: PropTypes.number.isRequired,
-        followers: PropTypes.number.isRequired,
-        following: PropTypes.number.isRequired,
+        username: React.PropTypes.string.isRequired,
+        photo: React.PropTypes.string.isRequired,
+        login: React.PropTypes.string.isRequired,
+        repos: React.PropTypes.number.isRequired,
+        followers: React.PropTypes.number.isRequired,
+        following: React.PropTypes.number.isRequired,
     })
 }
 

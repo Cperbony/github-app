@@ -5,12 +5,11 @@ import Search from './search'
 import UserInfo from './user-info';
 import Actions from './actions';
 import Repos from './repos';
-import { userInfo } from 'os';
 
-const AppContent = ({ userinfo, repos, starred }) => (
+const AppContent = ({ userinfo, repos, starred, handleSearch }) => (
     <div className='app'>
-        <Search />
-        {!!userinfo && <UserInfo userinfo={userInfo} />}
+        <Search handleSearch={handleSearch} />
+        {!!userinfo && <UserInfo userinfo={userinfo} />}
         {!!userinfo && <Actions />}
 
         {!!repos.length &&
@@ -32,9 +31,9 @@ const AppContent = ({ userinfo, repos, starred }) => (
 )
 
 AppContent.propTypes = {
-    userinfo: PropTypes.object.isRequired,
-    repos: PropTypes.array.isRequired,
-    starred: PropTypes.array.isRequired
+    userinfo: React.PropTypes.object,
+    repos: React.PropTypes.array.isRequired,
+    starred: React.PropTypes.array.isRequired
 }
 
 export default AppContent
