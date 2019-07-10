@@ -10,12 +10,14 @@ const AppContent = ({
     userinfo,
     repos,
     starred,
+    isFetching,
     handleSearch,
     getRepos,
     getStarred
 }) => (
         <div className='app'>
-            <Search handleSearch={handleSearch} />
+            <Search isDisabled={isFetching} handleSearch={handleSearch} />
+            {isFetching && <div>Carregando ....</div>}
             {!!userinfo && <UserInfo userinfo={userinfo} />}
             {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
 
@@ -40,7 +42,11 @@ const AppContent = ({
 AppContent.propTypes = {
     userinfo: React.PropTypes.object,
     repos: React.PropTypes.array.isRequired,
-    starred: React.PropTypes.array.isRequired
+    starred: React.PropTypes.array.isRequired,
+    isFetching: React.PropTypes.bool.isRequired,
+    handleSearch: React.PropTypes.func.isRequired,
+    getRepos: React.PropTypes.func.isRequired,
+    getStarred: React.PropTypes.func.isRequired
 }
 
 export default AppContent
